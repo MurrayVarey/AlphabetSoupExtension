@@ -27,9 +27,9 @@ function setPageBackgroundColor() {
 
 function toggleText() {
   var x = document.getElementById("colourText");
-  if (x.innerHTML === "Green") {
-    x.innerHTML = "Really green!";
+  if (x.innerHTML === "Normal") {
+    x.innerHTML = "Green!";
   } else {
-    x.innerHTML = "Green";
+    x.innerHTML = "Normal";
   }
 }
