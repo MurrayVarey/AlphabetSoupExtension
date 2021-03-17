@@ -13,6 +13,8 @@ changeColor.addEventListener("click", async () => {
     target: { tabId: tab.id },
     function: setPageBackgroundColor,
   });
+
+  toggleText();
 });
 
 // The body of this function will be executed as a content script inside the
@@ -21,4 +23,13 @@ function setPageBackgroundColor() {
   chrome.storage.sync.get("color", ({ color }) => {
     document.body.style.backgroundColor = color;
   });
+}
+
+function toggleText() {
+  var x = document.getElementById("colourText");
+  if (x.innerHTML === "Green") {
+    x.innerHTML = "Really green!";
+  } else {
+    x.innerHTML = "Green";
+  }
 }
